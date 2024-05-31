@@ -1,0 +1,147 @@
+@import url('./style.css');
+
+
+body {
+    background-color: #FAF4EC;
+}   
+
+
+.container-text-contact {
+    overflow: hidden;
+    width: 80%;
+    max-width: 1200px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+
+.text-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+ 
+.text-contact p {
+    font-size: 110px;
+    text-transform:uppercase;
+    font-weight: 900;
+    font-family: 'Fjalla one'
+}
+
+.plus-vite {
+    position: relative;
+    text-align: center;
+}
+
+.plus-vite p {
+    width: 80px;
+    max-width: 90px;
+    font-size: 15px;
+    background-color: #FAC84A;
+    padding: 10px;
+    border-radius: 12px;
+    text-transform: lowercase;
+
+    position: absolute;
+    top: 30px;
+    right: -60px;
+    transform: rotate(-20deg);
+}
+
+.formulaire {
+    width: 70%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+}
+
+
+label {
+    margin:  10px;
+    font-weight: 900;
+    font-family: 'Bubbler one';  
+    font-size: 20px;
+}
+
+#fname,
+#lname,
+#emai,
+#message {
+    all: unset;
+}
+
+#fname,
+#lname,
+#emai,
+#message {
+    background-color: #DED7D0;
+    border-radius: 10px;
+    padding: 15px ;
+}
+
+input::placeholder {
+    margin: 40px;
+}
+
+#message {
+    height: 200px;
+}
+
+.button{
+    width: 100%;
+    max-width: 200px;
+    position:relative;  
+    margin: 10px auto;
+  }
+  
+  .button a{
+    color: #1a1c12;
+    font-family:'Bubbler one';
+    font-weight:bold;
+    font-size:36px;
+    text-align: center;
+    text-decoration:none;
+    background-color:#FAC84A;
+    display:block;
+    position:relative;
+    padding:20px 40px;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  .button a:active{
+    top:10px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(90, 131, 63);
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #ffffff;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #ffffff;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #ffffff;
+  }
+  
+  .button:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
