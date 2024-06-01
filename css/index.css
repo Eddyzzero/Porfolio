@@ -134,11 +134,11 @@ header {
     width: 400px;
 }
 
-.container-text-petit p {
-    font-family: 'Bubbler one';
-    font-weight: 800;
-    font-size: 1.9em;
-}
+    .container-text-petit p {
+        font-family: 'Bubbler one';
+        font-weight: 800;
+        font-size: 1.9em;
+    }
 
 /*** ceci est le Deuxième container section ***/
 .container-principal-deux{
