@@ -39,7 +39,7 @@ header {
 .container-liens ul li a {
     background-color: #FAC84A;
     font-family: 'Bubbler one', sans-serif;
-    font-size: 50px;
+    font-size: 3em;
     font-weight:600 ;
     padding: 30px 90px;
     border-radius: 20px;
@@ -149,7 +149,6 @@ header {
     background-color: #1A1C12;
     color: #faf4ec;
     border-radius: 40px;
-    font-size: 20px;
     overflow: hidden;
 }
 
@@ -199,7 +198,7 @@ header {
 }
 
 .container-education div p:nth-child(1) {
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 500;
 }
 
@@ -395,7 +394,7 @@ header {
 }
 
 .contactez-moi p:nth-child(1) {
-    font-size: 90px;
+    font-size: 5em;
     font-family: 'Bubbler one';
     font-weight: 800;
     text-transform: uppercase;
@@ -434,7 +433,7 @@ header {
 
 .container-tel-email-child p:nth-child(1) {
     font-family: 'Bubbler one';
-    font-size: 40px;
+    font-size: 3em;
     font-weight: 600;
     text-transform: capitalize;
 }
@@ -462,6 +461,7 @@ footer {
 }
 
 .container-footer p {
+    color: #faf4ec;
     text-align: center;
 }
 

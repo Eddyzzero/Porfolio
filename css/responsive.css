@@ -37,31 +37,40 @@
 
 @media (max-width : 1529px) {
 
+    .container-text h1  p{
+        font-size: 4em;
+    }
+
     .container-contact {
         height: 1000px;
     }
 
-    .container-tel-email {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 20px 0;
-    }
     .container-tel-email-child {
-        width: 850px;
+        width: 60%;
         height: 50px;
         padding: 30px 50px;
     }
 
-    .container-tel-email-child p  {
-    }
-
     .position1 {
         top: 20px;
-        left: 280px;
+        left: 240px;
     }
 
     .position2 {
         top: 150px;
-        left: 280px;
+        left: 240px;
+    }
+
+    .contactez-moi {
+        width: 50%;
+    }
+
+}
+
+@media ( max-width: 529px ) {
+
+    .container-principal-un {
+        margin: 0 auto;
+        overflow-x: hidden;
     }
 }
