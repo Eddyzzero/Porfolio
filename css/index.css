@@ -2,7 +2,6 @@
 /*** ceci est le prèmier container section ***/
 .container-principal-un {
     width: 100%;
-    margin: 0 0 200px 0;
     padding: 0 0 250px 0;
     overflow: hidden;
 }
@@ -47,7 +46,7 @@ header {
     text-decoration: none;
     color: #1A1C12;
 
-    transition: 1s ease;
+    transition: 0.5s ease;
 
     -webkit-box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.75);
@@ -56,6 +55,7 @@ header {
 
 .container-liens ul li a:hover{
     background-color: #1A1C12;
+    color: #faf4ec;
 }
 
 .container-liens ul li:nth-child(2) a {
@@ -251,8 +251,12 @@ header {
 /*** section projets ***/
 .mes-projects {
     width: 100%;
-    padding: 150px 0 0 100px;
+    padding: 150px 0 0 0;
     overflow: hidden;
+}
+
+.projets-enfant {
+    padding: 0 90px;
 }
 
 .projets-enfant p {
@@ -293,11 +297,11 @@ header {
 
 .container-carre-projects .container-child-projets:nth-child(1) {
     top: 400px;
-    left: 70px;
+    left: 150px;
 }
 
 .container-carre-projects .container-child-projets:nth-child(2) {
-    right: 300px;
+    right: 200px;
 }
 
 .container-child-projets img {
@@ -329,6 +333,9 @@ header {
     height: 10px;
 }
 
+
+/*Section  contact */
+
 .container-contact {
     color: #faf4ec;
     background-color: #1A1C12;
@@ -336,8 +343,6 @@ header {
     border-top-right-radius: 40px;
     height: 900px;
 }
-
-/*Section  contact */
 
 .container-contact-child {
     width: 100%;
@@ -366,17 +371,7 @@ header {
     right:-1144px;
 }
 
-.aller-haute {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #faf4ec;
-    color: #1A1C12;
-    padding: 6px 70px;
-    gap: 40px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
+
 
 .clicker {
     text-decoration: none;
@@ -389,7 +384,7 @@ header {
     background-color: #faf4ec;
     color: #1A1C12;
     padding: 170px 250px;
-    border-top-left-radius: 20px;
+    border-radius: 20px;
 
     transition: 0.5s ease;
 }
@@ -413,23 +408,28 @@ header {
 .position1 {
     position: absolute;
     top: -90px;
-    left: 200px;
+    left: 400px;
     z-index: 1;
 }
 
 .position2 {
     position: absolute;
     top: -90px;
-    right: 200px;
+    right: 400px;   
     z-index: 1;
 }
 
 .container-tel-email-child {
     background-color: #1A1C12;
     width:300px;
-    padding: 40px 100px;
+    padding: 90px 100px;
     border: 2px solid #faf4ec;
     border-radius: 20px;
+
+    -webkit-box-shadow: 10px -10px 0px 0px rgba(250,244,236,1);
+    box-shadow: 10px -10px 0px 0px rgba(250,244,236,1);
+
+
 }
 
 .container-tel-email-child p:nth-child(1) {
