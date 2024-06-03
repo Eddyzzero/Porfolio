@@ -131,3 +131,26 @@ button {
 	width: 20px;
 }
 
+/* transitions JS*/
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}
+
+.reveal-2 {
+	transition-delay: .1s;
+}
+
+.reveal-3 {
+	transition-delay: .1s;
+}
+
+.reveal-4 {
+	transition-delay: .1s;
+}

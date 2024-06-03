@@ -12,12 +12,21 @@ header {
     margin: 20px 20px;
 }
 
-.header-jhon > p {
-    font-family: 'Fjalla one' ;
+.header-jhon {
+    padding: 20px;
+}
+
+.header-jhon a {
+    text-decoration: none;
+}
+
+.header-jhon a p {
+    font-family: 'Fjalla one';
     font-weight: 700;
     font-size: 1.7em;
     color: #1A1C12;
     letter-spacing: -2px;
+    text-transform:capitalize;
 }
 
 /* cacher pour responsive mobile */
@@ -88,6 +97,7 @@ header {
     -moz-box-shadow: -13px 10px 0px 0px rgba(0,0,0,0.75);
     box-shadow: -13px 10px 0px 0px rgba(0,0,0,0.75);
 }
+
 
 .container-text h1 p {
     display: flex;
@@ -309,7 +319,7 @@ header {
     height: 100%;
     margin: 10px 0;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
 .container-child-projets:nth-child(1) div  {
@@ -360,17 +370,6 @@ header {
     flex-direction: column;
     width: 100%;
 }
-
-.container-aller-haute {
-    width: 100%;
-    display: flex;
-
-    position: absolute;
-    top: 221px; 
-    right:-1144px;
-}
-
-
 
 .clicker {
     text-decoration: none;
@@ -427,8 +426,6 @@ header {
 
     -webkit-box-shadow: 10px -10px 0px 0px rgba(250,244,236,1);
     box-shadow: 10px -10px 0px 0px rgba(250,244,236,1);
-
-
 }
 
 .container-tel-email-child p:nth-child(1) {
@@ -468,6 +465,10 @@ footer {
 .icons-social {
     display: flex;
     gap: 20px;
+}
+
+.icons-social a {
+    
 }
 
 footer  img {
