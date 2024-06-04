@@ -8,6 +8,7 @@
     <title>Jhon Florez</title>
 </head>
 <body>
+
     <section class="container-principal-un">
         <!-- header -->
         <header>
@@ -55,6 +56,7 @@
             </div>
         </section>
     </section>
+
     <!-- deuxiéme section  -->
     <section class="container-principal-deux" id="informations-perso">
         <div class="container-infos reveal">
@@ -188,6 +190,7 @@
             </section>
         </div>
     </section>
+
     <!-- dernière section skills -->
     <section class="mes-projects reveal" id="mes-projects">
         <div class=" projets-enfant container-col">
@@ -203,7 +206,10 @@
                 </div>
                 <img src="./assets/img/xalix.png" alt="">
                 <h3>Xalix</h3>
-                <button>Savoir plus</button>
+                <div class="container-buttons">
+                    <button class="modal-trigger">Modifier</button>
+                    <button class="modal-trigger">Savoir plus</button>
+                </div>
             </div>
             <div class="container-child-projets">
                 <div class="container-points">
@@ -213,10 +219,26 @@
                 </div>
                 <img src="./assets/img/Nisage.png" alt="">
                 <h3>Nisage</h3>
-                <button>Savoir plus</button>
+                <div class="container-buttons">
+                    <button class="modal-trigger">Modifier</button>
+                    <button class="modal-trigger">Savoir plus</button>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <!-- cette partie es pour afficher la fênetre modale -->
+    <section>
+        <div class="modal-container">
+            <div class="overlay modal-trigger"></div>
+            <div class="modal">
+                <button class="close-modal modal-trigger"> X </button>
+                <h1>Modificateur de contenue</h1>
+            </div>
+        </div>
+    </section>
+
     <!-- troixième Section  contact-->
     <section class="container-contact" id="contact">
         <div class="container-marges">
@@ -250,7 +272,9 @@
             </div>
         </div>
     </section>
+
     <hr>
+
     <!--Footer-->
     <footer>
         <div class="container-footer">
