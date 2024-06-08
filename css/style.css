@@ -9,10 +9,16 @@
 @import url('./responsive.css');
 @import url('./formulaire.css');
 @import url('./burger-menu.css');
+@import url('./navbar.css');
 
 :root {
 	/* couleurs  */
 	--color-yellow : #fac84a;
+	--color-black : #1A1C12;
+	--color-white : #FAF4EC;
+
+	/* fonts textes moyens*/
+	--font-text-2 : font-family: 'Bubbler one';
 }
 
 /*********** Reset css  **********/

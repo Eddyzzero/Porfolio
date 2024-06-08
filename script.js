@@ -37,4 +37,3 @@ function ToggleModal() {
 document.getElementById("contactDiv").addEventListener("click", () => {
     window.location.href = "./formulaire.php";
 })
-

@@ -16,30 +16,29 @@ include './modifier_fichier.php';
 <body>
 
     <section class="container-principal-un">
-        <!-- header -->
+        <!-- header
         <header>
-            <nav class="nav-bar">
+            <div class="side-bar" id="mySideNav">
                 <div class="header-jhon">
                     <a href="./index.php"><p>Jhon Florez</p></a>
-                </div>
+                    </div>
+                <a href="#" id="openBtn" class="close"></a>
+                <ul>
+                    <li><a href="#mes-projects">Projects</a></li>
+                    <li><a href="#informations-perso">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
                 <div>
                     <!-- Bouton du menu burger -->
-                    <div class="burger">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
-                    <!-- Menu burger responsive design-->
-                    <nav class="nav-menu">
-                        <ul>
-                            <li><a href="#mes-projects">Projects</a></li>
-                            <li><a href="#informations-perso">À propos</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
+                    <!--<a href="" id="closeBtn">
+                        <span class="burger-icon"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </header> -->
 
         <section>
         <!-- Premier texte banner -->
@@ -245,7 +244,7 @@ include './modifier_fichier.php';
                     <label for="title">Titre</label>
                     <input type="text" id="title" name="title" required>
                 </div>
-                <div>
+                <div class="separation-form-text">
                     <label for="link">Lien</label>
                     <input type="url" id="link" name="link" required>
                 </div>
