@@ -32,3 +32,9 @@ modalTrigger.forEach(trigger => trigger.addEventListener("click",ToggleModal))
 function ToggleModal() {
     modalContainer.classList.toggle("active")
 }
+
+// rendre cliquanble la  div contact 
+document.getElementById("contactDiv").addEventListener("click", () => {
+    window.location.href = "./formulaire.php";
+})
+

@@ -1,3 +1,9 @@
+<?php 
+include './app/config.php';
+include './app/fcts-app.php';
+include './modifier_fichier.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,19 +18,29 @@
     <section class="container-principal-un">
         <!-- header -->
         <header>
-            <div class="header-jhon">
-                <a href="./index.html"><p>Jhon Florez</p></a>
-            </div>
-            <!-- Menu burger responsive design-->
-            <div class="container-burger">
-                <ul>
-                    <li><a href="#mes-projects">Projects</a></li>
-                    <li><a href="#informations-perso"></a>à propos</li>
-                    <li><a href="#contact"></a> Contact</li>
-                </ul>   
-            </div>
+            <nav class="nav-bar">
+                <div class="header-jhon">
+                    <a href="./index.php"><p>Jhon Florez</p></a>
+                </div>
+                <div>
+                    <!-- Bouton du menu burger -->
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <!-- Menu burger responsive design-->
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a href="#mes-projects">Projects</a></li>
+                            <li><a href="#informations-perso">À propos</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
         </header>
-        <!-- Sections informations personnel -->
+
         <section>
         <!-- Premier texte banner -->
             <div class="container-liens reveal">
@@ -114,22 +130,22 @@
                         <div class="container-barreDProgression">
 
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="nine"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="seven"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="six"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="six"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="eight"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="nine"></div>
                             </div>
                         </div>
                     </section>
@@ -150,25 +166,25 @@
                         <div class="container-barreDProgression">
 
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="ten"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="eight"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="eight"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="four"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="four"></div>
                             </div>
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="six"></div>
                             </div>    
                             <div class="barreDProgression">
-                                <div class=" progression"></div>
+                                <div class=" progression" id="eight"></div>
                             </div>
                         </div>
                     </section>
@@ -191,66 +207,65 @@
         </div>
     </section>
 
-    <!-- dernière section skills -->
-    <section class="mes-projects reveal" id="mes-projects">
-        <div class=" projets-enfant container-col">
-            <p>mes</p>
-            <p>Projects</p>
-        </div>
-        <div class="container-carre-projects">
-            <div class="container-child-projets">
-                <div class="container-points">
-                    <div class="point"></div>
-                    <div class="point"></div>
-                    <div class="point"></div>
-                </div>
-                <img src="./assets/img/xalix.png" alt="">
-                <h3>Xalix</h3>
-                <div class="container-buttons">
-                    <button class="modal-trigger">Modifier</button>
-                    <button class="modal-trigger">Savoir plus</button>
-                </div>
+<!-- Section des projets -->
+<section class="mes-projects reveal" id="mes-projects">
+    <div class="projets-enfant container-col">
+        <p>mes</p>
+        <p>Projects</p>
+    </div>
+    <div class="container-carre-projects">
+        <?php foreach ($projects as $project): ?>
+        <div class="container-child-projets">
+            <div class="container-points">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
             </div>
-            <div class="container-child-projets">
-                <div class="container-points">
-                    <div class="point"></div>
-                    <div class="point"></div>
-                    <div class="point"></div>
-                </div>
-                <img src="./assets/img/Nisage.png" alt="">
-                <h3>Nisage</h3>
-                <div class="container-buttons">
-                    <button class="modal-trigger">Modifier</button>
-                    <button class="modal-trigger">Savoir plus</button>
-                </div>
+            <img src="./assets/img/xalix.png" alt="">
+            <h3><?php echo htmlspecialchars($project['title']); ?></h3>
+            <div class="container-buttons">
+                <button class="modal-trigger" data-id="<?php echo $project['id']; ?>">Modifier</button>
+                <a href="<?php echo htmlspecialchars($project['link']); ?>">savoir plus</a>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</section>
 
-            </div>
+<!-- Section modale -->
+<section>
+    <div class="modal-container">
+        <div class="overlay modal-trigger"></div>
+        <div class="modal">
+            <button class="close-modal modal-trigger"> X </button>
+            <h1>Modificateur de contenu</h1>
+            <form class="editer-form" id="editer-project-form">
+                <input type="hidden" id="project-id" name="project-id">
+                <div class="separation-form-text">
+                    <label for="title">Titre</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div>
+                    <label for="link">Lien</label>
+                    <input type="url" id="link" name="link" required>
+                </div>
+                <button type="submit">Enregistrer les modifications</button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- cette partie es pour afficher la fênetre modale -->
-    <section>
-        <div class="modal-container">
-            <div class="overlay modal-trigger"></div>
-            <div class="modal">
-                <button class="close-modal modal-trigger"> X </button>
-                <h1>Modificateur de contenue</h1>
-            </div>
-        </div>
-    </section>
+
 
     <!-- troixième Section  contact-->
     <section class="container-contact" id="contact">
         <div class="container-marges">
-            <div class="container-contact-child reveal">
-                <div class="container-aller-haute">
-                </div>
-                <a class="clicker" href="./formulaire.html">
+            <div class="container-contact-child" id="contactDiv">
                     <div class="contactez-moi">
                         <p>Contactez moi</p>
                         <p>J’aurais le plasir de vous recontacter</p>
+                        <p><b>cliquez ici</b></p>
                     </div>
-                </a>
             </div>
             <div class="container-tel-email">
                 <!--Téléphone-->
@@ -281,13 +296,13 @@
             <p> Version 2024</p>
             <div class="icons-social">
                 <a href="https://www.instagram.com/jhon__florez/" target="_blank">
-                    <img src="/assets/icons/instagram.svg" alt="instagram">
+                    <img src="./assets/icons/instagram.svg" alt="instagram">
                 </a>
                 <a href="https://www.linkedin.com/in/jhon-florez-102aa82b3/" target="_blank">
-                    <img src="/assets/icons/linkedin.svg" alt="linkedin">
+                    <img src="./assets/icons/linkedin.svg" alt="linkedin">
                 </a>
-             <a href="https://www.facebook.com/profile.php?id=100087910940662" target="_blank">
-                    <img src="/assets/icons/square-facebook.svg" alt="facebook">
+                <a href="https://www.facebook.com/profile.php?id=100087910940662" target="_blank">
+                    <img src="./assets/icons/square-facebook.svg" alt="facebook">
                 </a>
             </div>
         </div>

@@ -31,34 +31,52 @@
     }
 
     .container-row p {
-        font-size: 15px;
+        width: 12vw;
+        font-size: 1em;
+        margin: 0 auto;
     }
 }
 
 @media (max-width : 1529px) {
 
-    .container-text h1  p{
-        font-size: 4em;
+    .container-text {
+        width: 482px;
+        top: -840px;
     }
 
-    .container-contact {
-        height: 1000px;
+    .container-text h1  p{
+        font-size: 3em;
     }
+
+    .container-text-petit {
+        top: -297px;
+        right: 153px;
+        padding: 50px;
+    }
+
+
 
     .container-tel-email-child {
         width: 60%;
-        height: 50px;
         padding: 30px 50px;
     }
 
     .position1 {
-        top: 20px;
-        left: 240px;
+        width: 30%;
+        position: absolute;
+        top: 50px;
+        left: 30%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
     }
 
     .position2 {
-        top: 150px;
-        left: 240px;
+        width: 30%;
+        position: absolute;
+        top: 50px;
+        left: 70%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
     }
 
     .contactez-moi {
@@ -67,16 +85,108 @@
 
 }
 
-@media ( max-width: 529px ) {
+@media screen and (max-width: 1342px) {
+    
+    .position1 {
+        width: 30%;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+    }
+    
+    .position2 {
+        width: 30%;
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    .container-row p {
+        margin: 0 auto;
+        width: 170px;;
+    }
+}
+
+@media screen and ( max-width: 1216px ) {
+
+    .text-contact  {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .text-contact p {
+        font-size: 2em;
+    }
+
+    .plus-vite {
+        top: 70px;
+        right: 20px;
+        transform: rotate(-10deg);
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 1102px ) {
+
+    .container-text {
+        width: 482px;
+        top: -540px;
+    }
+
+    .container-text h1  p{
+        font-size: 3em;
+    }
+
+    .container-text-petit {
+        top: -30px;
+        right: 229px;
+        padding: 50px;
+    }
+
+    .container-text-petit p  {
+        font-size: 1em;
+    }
+
+    .container-liens ul li a {
+    font-size: 2em;
+    font-weight: 600;
+    padding: 20px 50px;
+
+    }
+
+    .container-liens > ul {
+        gap: 90px;
+}
+
+.container-infos {
+    gap: 20px;
+}
+
+}
+
+@media screen and ( max-width: 768px ) {
 
     .container-principal-un {
         padding: 0;
     }
+    
+    .container-text {
+        width: 400px;
+        top: -440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .container-text-principal {
-        width: 400px;
-        top: 100px;
-        right: 50px;
+        width: 50%;
+        top: 70px;
+        right: -200px;
         padding: 50px;
     }
 
@@ -90,8 +200,8 @@
 
     .container-text-petit {
         width: 250px;
-        top: -700px;
-        right: 100px;
+        top: -220px;
+        right:0;
         padding: 30px;
     }
 
@@ -113,16 +223,10 @@
         gap: 60px;
     }
 
-    .container-enfant {
-        height: 450px;
-    }
 
-    .container-enfant img {
-        height: 400px;
-    }
 
     .container-liens {
-    margin: 550px 0 0 120px;
+    margin: 100px 0 0 20px;
     }
 
     .container-liens ul{
@@ -133,6 +237,11 @@
     
     .container-liens ul li a {
         font-size: 1.6em;
+        padding: 10px 30px;
+    }
+
+    .container-langages {
+        gap: 50px;
     }
 
     .projets-enfant {
@@ -140,43 +249,94 @@
         padding: 50px;
     }
 
-        .projets-enfant {
-            padding: 20px;
+    .projets-enfant {
+        padding: 20px;
+    }
+
+    .container-carre-projects {
+        height: 100vh;
+    }
+
+    .container-child-projets {
+        width: 60%;
+    }
+
+    .container-carre-projects .container-child-projets:nth-child(1) {
+        top: 400px;
+        left: 100px;
+    }
+    
+    .container-carre-projects .container-child-projets:nth-child(2) {
+        right: 100px;
+    }
+
+    .contactez-moi {
+        justify-content: center;
+        align-items: center;
+        font-size: 0.5em;
+        padding: 100px 100px;
+    }
+
+    .position1 {
+        width: 20%;
+        position: absolute;
+        top: 50px;
+        left: 30%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    .position2 {
+        width: 20%;
+        position: absolute;
+        top: 50px;
+        left: 70%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    .container-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container-tel-email-child p {
+        font-size: 0.7rem;
+    }
+
+    hr {
+        max-width: 2000px;
+    }
+    .container-footer {
+        width: 100%;
+
+    }
+
+    .text-contact  {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
         }
 
-        .container-carre-projects {
-            height: 750px;
-        }
+    .plus-vite {
+        top: 70px;
+        right: 20px;
+        transform: rotate(-10deg);
+        padding: 20px 0;
+    }
+}
 
-        .container-child-projets {
-            width: 60%;
-            height: 250px;
-        }
+@media screen and (max-width: 744px) {
+    
+    .text-contact {
+        font-size: 10px;
+    }
 
-        .container-carre-projects .container-child-projets:nth-child(1) {
-            top: 400px;
-            left: 100px;
-        }
-        
-        .container-carre-projects .container-child-projets:nth-child(2) {
-            right: 100px;
-        }
-
-        .contactez-moi {
-            justify-content: center;
-            align-items: center;
-            font-size: 0.5em;
-            padding: 100px 100px;
-        }
-
-        .position1 {
-            left: 30px;
-        }
-        .position2 {
-            left: 30px;
-        }
-
-        footer{
-            padding: 0 40px;
-        }
+    .plus-vite {
+        top: 50px;
+        right: -5px;
+        transform: rotate(-2deg);
+        padding: 30px 0;
+    }
 }

@@ -2,6 +2,7 @@
 /*** ceci est le prèmier container section ***/
 .container-principal-un {
     width: 100%;
+    max-width: 2000px;
     padding: 0 0 250px 0;
     overflow: hidden;
 }
@@ -30,7 +31,7 @@ header {
 }
 
 /* cacher pour responsive mobile */
-.container-burger {
+.nav-bar {
     display: none;
 }
 
@@ -81,7 +82,7 @@ header {
 }
 
 .container-text {
-    max-width: 90%;
+    max-width: 100%;
     width: 700px;
     font-family: 'Fjalla one';
     border: 5px solid #3f3d3b;
@@ -125,8 +126,7 @@ header {
 
 .container-text-petit {
     background-color: #faf4ec;
-    width: 300px;
-    height: 100px;
+    width: 20%;
     border: 5px solid #3f3d3b;
     padding: 100px;
     border-radius: 30px;
@@ -141,7 +141,7 @@ header {
 }
 
 .container-text-petit h2 {
-    width: 400px;
+    width: 100%;
 }
 
     .container-text-petit p {
@@ -153,6 +153,7 @@ header {
 /*** ceci est le Deuxième container section ***/
 .container-principal-deux{
     width: 100%;
+    max-width: 2000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,7 +174,8 @@ header {
 .container-enfant{
     width: 100%;
     max-width: 250px;
-    height: 500px;
+    height: 100%;
+    max-height:  60vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -226,8 +228,8 @@ header {
     flex-direction: column;
 }
 .container-enfant2 {
-    font-size: 1em;
     width: 100%;
+    font-size: 1em;
     max-width: 400px;
     margin: 12px 0 0 0;
     display: flex;
@@ -243,7 +245,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .barreDProgression {
@@ -251,20 +253,74 @@ header {
     border-radius: 3px;
 }
 
-.progression {
-    width: 30px;
-    height: 2px;
+#one {
+    width: 10%;
+    height: 4px;
     background-color:#faf4ec;
-
 }
+
+#two {
+    width: 20%;
+    height: 4px;
+    background-color:#faf4ec;
+}
+
+#three {
+    width: 30%;
+    height: 4px;
+    background-color:#faf4ec;
+}
+
+#four {
+    width: 40%;
+    height: 4px;
+    background-color:#faf4ec;
+}
+
+#five {
+    width: 50%;
+    height: 4px;
+    background-color:#faf4ec;
+}
+#six {
+    width: 60%;
+    height: 4px;
+    background-color:#faf4ec;
+}
+
+#seven {
+    width: 70%;
+    height: 4px;
+    background-color:#faf4ec;
+}
+
+#eight {
+    width: 80%;
+    height: 4px;
+    background-color:#faf4ec;
+}
+
+#nine {
+    width: 90%;
+    height: 4px;
+    background-color:#faf4ec;
+}
+#ten {
+    width: 100%;
+    height: 4px;
+    background-color:#faf4ec;
+}
+
 /*** section projets ***/
 .mes-projects {
     width: 100%;
+    max-width: 2000px;
     padding: 150px 0 0 0;
     overflow: hidden;
 }
 
 .projets-enfant {
+    width: 100%;
     padding: 0 90px;
 }
 
@@ -272,14 +328,14 @@ header {
     font-size: 15em;
     font-family: 'Fjalla one';
     text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -15px;
 }
 
 .container-carre-projects {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     gap: 50px;
-    width: 100%;
     height: 1100px;
     position: relative;
     overflow: hidden;
@@ -350,46 +406,63 @@ header {
     gap: 30px;
 }
 
+.container-buttons a{
+    text-decoration: none;
+	background-color: #fac84a;
+    color: #1A1C12;
+	border:2px solid #1A1C12;
+	border-radius: 12px;
+	padding: 5px 10px;
+}
+
 /*Section  contact */
 
 .container-contact {
+    width: 100%;
+    max-width: 2000px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #faf4ec;
     background-color: #1A1C12;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    height: 900px;
 }
 
 .container-contact-child {
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 40px;
-    padding: 250px 0 0 0;
-    margin: 0 auto;
-
     position: relative;
 }
-.container-marges {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.container-contact-child a {
+    width: 70%;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.clicker {
-    text-decoration: none;
+.container-marges {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
 .contactez-moi {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 150px 10px;
     background-color: #faf4ec;
     color: #1A1C12;
-    padding: 170px 250px;
     border-radius: 20px;
+    cursor: pointer;
 
     transition: 0.5s ease;
 }
@@ -406,22 +479,32 @@ header {
     text-transform: uppercase;
 }
 
+.contactez-moi p:nth-child(3) {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
 .container-tel-email {
+    width: 100%;
+    max-width: 2000px;
     position: relative;
 }
 
 .position1 {
     position: absolute;
-    top: -90px;
-    left: 400px;
+    top: 50px;
+    left: 30%;
     z-index: 1;
+    transform: translate(-50%, -50%);
 }
 
 .position2 {
     position: absolute;
-    top: -90px;
-    right: 400px;   
+    top: 50px;
+    left: 70%;
     z-index: 1;
+    transform: translate(-50%, -50%);
 }
 
 .container-tel-email-child {
@@ -445,6 +528,57 @@ header {
 
 /*  modificateur de contenue ou fenêtre modale */
 
+.editer-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.editer-form label,
+.editer-form input,
+.editer-form textarea
+{
+    width: 100%;
+}
+
+.editer-form label,
+.editer-form input {
+    padding: 5px 5px;
+}
+
+
+#project-id,
+#title,
+#description,
+#link {
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+#description {
+    width: 100%;
+    height: 20vw;
+}
+
+.editer-form button {
+    width: 100%;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: 30px;
+
+    transition: 0.5s ease;
+}
+
+.editer-form button:hover {
+    background-color: #5a833f ;
+    color: #faf4ec;
+    
+}
+
+
 .modal-container {
     /* display: none; */
     visibility: hidden;
@@ -452,13 +586,19 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
+    max-width: 2000px;
     height: 100vh;
+}
+
+.modal h1 {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .modal-container.active {
     /* display: block; */
-     visibility: visible;
-     transition: visibility 0s;
+    visibility: visible;
+    transition: visibility 0s;
 
 }
 
@@ -520,18 +660,23 @@ header {
 }
 
 hr {
+    width: 100%;
+    max-width: 1000px;
     margin: 0 10%;
 }
 
 footer {
+    width: 100%;
+    max-width: 2000px;
     background-color: #1A1C12;
 }
 
 .container-footer {
     padding: 40px 90px;
     display: flex;
-    justify-content: end;
-    gap: 700px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 0;
 }
 
 .container-footer p {
@@ -544,9 +689,6 @@ footer {
     gap: 20px;
 }
 
-.icons-social a {
-    
-}
 
 footer  img {
     width: 100%;

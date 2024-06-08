@@ -6,8 +6,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Spinnaker&display=swap');
 
 @import url('./index.css');
-@import url('./formulaire.css');
 @import url('./responsive.css');
+@import url('./formulaire.css');
+@import url('./burger-menu.css');
+
+:root {
+	/* couleurs  */
+	--color-yellow : #fac84a;
+}
 
 /*********** Reset css  **********/
 html, body, div, span, applet, object, iframe,
