@@ -1,7 +1,7 @@
 <?php 
 include './app/config.php';
 include './app/fcts-app.php';
-include './modifier_fichier.php';
+include './photo.php';
 ?>
 
 <!DOCTYPE html>
@@ -206,7 +206,7 @@ include './modifier_fichier.php';
         </div>
     </section>
 
-<!-- Section des projets -->
+<!-- Première section -->
 <section class="mes-projects reveal" id="mes-projects">
     <div class="projets-enfant container-col">
         <p>mes</p>
@@ -220,7 +220,7 @@ include './modifier_fichier.php';
                 <div class="point"></div>
                 <div class="point"></div>
             </div>
-            <img src="./assets/img/xalix.png" alt="">
+            <img id="projectImage" src="./assets/img/xalix.png" alt="">
             <h3><?php echo htmlspecialchars($project['title']); ?></h3>
             <div class="container-buttons">
                 <button class="modal-trigger" data-id="<?php echo $project['id']; ?>">Modifier</button>
@@ -238,23 +238,14 @@ include './modifier_fichier.php';
         <div class="modal">
             <button class="close-modal modal-trigger"> X </button>
             <h1>Modificateur de contenu</h1>
-            <form class="editer-form" id="editer-project-form">
-                <input type="hidden" id="project-id" name="project-id">
-                <div class="separation-form-text">
-                    <label for="title">Titre</label>
-                    <input type="text" id="title" name="title" required>
-                </div>
-                <div class="separation-form-text">
-                    <label for="link">Lien</label>
-                    <input type="url" id="link" name="link" required>
-                </div>
-                <button type="submit">Enregistrer les modifications</button>
+            <form id="imageForm" method="post" enctype="multipart/form-data">
+                <input type="file" id="photoInput" name="photo">
+                <input type="submit">
             </form>
+            <div id="photoPreview"></div>
         </div>
     </div>
 </section>
-
-
 
     <!-- troixième Section  contact-->
     <section class="container-contact" id="contact">
