@@ -39,22 +39,3 @@ document.getElementById("contactDiv").addEventListener("click", () => {
 })
 
 
-document.getElementById('imageForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche l'envoi du formulaire par défaut
-    
-    var formData = new FormData(this); // Récupère les données du formulaire
-    
-    // Envoie les données au serveur (vous pouvez implémenter ceci en PHP)
-    fetch('fct-app.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Met à jour l'attribut src de l'image avec l'URL du fichier téléchargé
-        document.getElementById('projectImage').src = data.imageUrl;
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-});

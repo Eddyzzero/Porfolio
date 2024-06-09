@@ -1,7 +1,6 @@
 <?php 
 include './app/config.php';
 include './app/fcts-app.php';
-include './photo.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,30 +15,6 @@ include './photo.php';
 <body>
 
     <section class="container-principal-un">
-        <!-- header
-        <header>
-            <div class="side-bar" id="mySideNav">
-                <div class="header-jhon">
-                    <a href="./index.php"><p>Jhon Florez</p></a>
-                    </div>
-                <a href="#" id="openBtn" class="close"></a>
-                <ul>
-                    <li><a href="#mes-projects">Projects</a></li>
-                    <li><a href="#informations-perso">À propos</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div>
-                    <!-- Bouton du menu burger -->
-                    <!--<a href="" id="closeBtn">
-                        <span class="burger-icon"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>>
-                </div>
-            </div>
-        </header> -->
-
         <section>
         <!-- Premier texte banner -->
             <div class="container-liens reveal">
@@ -238,7 +213,7 @@ include './photo.php';
         <div class="modal">
             <button class="close-modal modal-trigger"> X </button>
             <h1>Modificateur de contenu</h1>
-            <form id="imageForm" method="post" enctype="multipart/form-data">
+            <form id="imageForm" method="POST" enctype="multipart/form-data">
                 <input type="file" id="photoInput" name="photo">
                 <input type="submit">
             </form>
