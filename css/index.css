@@ -1,10 +1,15 @@
-/**** il y'a trois parties sur le site****/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* *** il y'a trois parties sur le site****/
 /*** ceci est le prèmier container section ***/
 .container-principal-un {
     width: 100%;
     max-width: 2000px;
     padding: 0 0 250px 0;
-    overflow: hidden;
 }
 
 /**** header ****/
@@ -37,6 +42,8 @@ header {
 
 /**** liens boutons ****/
 .container-liens {
+    width: 100%;
+    max-width: 350px;
     margin: 150px 0 0 120px;
 }
 
@@ -47,32 +54,60 @@ header {
 }
 
 .container-liens ul li a {
-    background-color: #FAC84A;
-    font-family: 'Bubbler one', sans-serif;
-    font-size: 3em;
-    font-weight:600 ;
-    padding: 30px 90px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: #1A1C12;
-
-    transition: 0.5s ease;
-
-    -webkit-box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.75);
+    color: #1a1c12;
+    font-family:'Bubbler one';
+    font-weight:bold;
+    font-size:36px;
+    text-align: center;
+    text-decoration:none;
+    background-color:#FAC84A;
+    display:block;
+    position:relative;
+    padding:20px 40px;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
-.container-liens ul li a:hover{
-    background-color: #1A1C12;
-    color: #faf4ec;
+.container-liens ul li a:active{
+    top:10px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(90, 131, 63);
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #ffffff;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #ffffff;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #ffffff;
+}
+
+.container-liens ul li a:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .container-liens ul li:nth-child(2) a {
     margin-left: 120px;
 }
 
-/**** grands carre haut de page ****/
+/* *** grands carre haut de page *** */
 .container-text-principal {
     width: 100%;
     display: flex;
@@ -82,7 +117,8 @@ header {
 }
 
 .container-text {
-    max-width: 100%;
+    width: 100%;
+    max-width: 550px;
     width: 700px;
     font-family: 'Fjalla one';
     border: 5px solid #3f3d3b;
@@ -153,7 +189,6 @@ header {
 /*** ceci est le Deuxième container section ***/
 .container-principal-deux{
     width: 100%;
-    max-width: 2000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,7 +199,7 @@ header {
 }
 
 .container-infos {
-    width: 100%;
+    max-width: 1500px;
     height: 700px;
     display: flex;
     justify-content: space-evenly;
@@ -173,9 +208,10 @@ header {
 
 .container-enfant{
     width: 100%;
+    margin-right: 30px;
     max-width: 250px;
     height: 100%;
-    max-height:  60vh;
+    max-height:40vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -517,7 +553,6 @@ margin-bottom: 5px;
 
 .container-contact {
     width: 100%;
-    max-width: 2000px;
     height: 900px;
     display: flex;
     flex-direction: column;
@@ -546,6 +581,7 @@ margin-bottom: 5px;
 
 .container-marges {
     width: 100%;
+    max-width: 1500px;
     display: flex;
     flex-direction: column;
 }
@@ -636,12 +672,12 @@ hr {
 
 footer {
     width: 100%;
-    max-width: 2000px;
     background-color: #1A1C12;
 }
 
 .container-footer {
-    padding: 40px 90px;
+    max-width: 1500px;
+    margin:0 auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

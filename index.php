@@ -181,51 +181,51 @@ include './app/fcts-app.php';
         </div>
     </section>
 
-<!-- Première section -->
-<section class="mes-projects reveal" id="mes-projects">
-    <div class="projets-enfant container-col">
-        <p>mes</p>
-        <p>Projects</p>
-    </div>
-    <div class="container-carre-projects">
-        <?php foreach ($projects as $project): ?>
-        <div class="container-child-projets">
-            <div class="container-points">
-                <div class="point"></div>
-                <div class="point"></div>
-                <div class="point"></div>
-            </div>
-            <img id="projectImage" src="./assets/img/xalix.png" alt="">
-            <h3><?php echo htmlspecialchars($project['title']); ?></h3>
-            <div class="container-buttons">
-                <button class="modal-trigger" data-id="<?php echo $project['id']; ?>">Modifier</button>
-                <a href="<?php echo htmlspecialchars($project['link']); ?>">savoir plus</a>
-            </div>
+    <!-- Première section -->
+    <section class="mes-projects reveal" id="mes-projects">
+        <div class="projets-enfant container-col">
+            <p>mes</p>
+            <p>Projects</p>
         </div>
-        <?php endforeach; ?>
-    </div>
-</section>
+        <div class="container-carre-projects">
+            <?php foreach ($projects as $project): ?>
+            <div class="container-child-projets">
+                <div class="container-points">
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                </div>
+                <img id="projectImage" src="./assets/img/xalix.png" alt="">
+                <h3><?php echo htmlspecialchars($project['title']); ?></h3>
+                <div class="container-buttons">
+                    <button class="modal-trigger" data-id="<?php echo $project['id']; ?>">Modifier</button>
+                    <a href="<?php echo htmlspecialchars($project['link']); ?>">savoir plus</a>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </section>
 
-<!-- Section modale -->
-<section>
-    <div class="modal-container">
-        <div class="overlay modal-trigger"></div>
-        <div class="modal">
-            <button class="close-modal modal-trigger"> X </button>
-            <h1>Modificateur de contenu</h1>
-            <form id="imageForm" method="POST" enctype="multipart/form-data">
-                <input type="file" id="photoInput" name="photo">
-                <input type="submit">
-            </form>
-            <div id="photoPreview"></div>
+    <!-- Section modale -->
+    <section>
+        <div class="modal-container">
+            <div class="overlay modal-trigger"></div>
+            <div class="modal">
+                <button class="close-modal modal-trigger"> X </button>
+                <h1>Modificateur de contenu</h1>
+                <form id="imageForm" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="photoInput" name="photo">
+                    <input type="submit">
+                </form>
+                <div id="photoPreview"></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- troixième Section  contact-->
     <section class="container-contact" id="contact">
         <div class="container-marges">
-            <div class="container-contact-child" id="contactDiv">
+            <div class="container-contact-child reveal" id="contactDiv">
                     <div class="contactez-moi">
                         <p>Contactez moi</p>
                         <p>J’aurais le plasir de vous recontacter</p>

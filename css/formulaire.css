@@ -3,6 +3,8 @@
 
 body {
     background-color: #FAF4EC;
+    display: flex;
+    flex-direction: column;
 }   
 
 
@@ -47,6 +49,10 @@ body {
     top: 30px;
     right: -60px;
     transform: rotate(-20deg);
+}
+
+.formulaire {
+    width: 100%;;
 }
 
 .formulaire form {
