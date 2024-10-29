@@ -9,10 +9,21 @@
 
 DROP TABLE IF EXISTS `projets`;
 CREATE TABLE `projets` (
-  `id` varchar(500) DEFAULT 'https://xalix.be/'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `image` longblob DEFAULT NULL,
+  `github` varchar(350) DEFAULT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
+INSERT INTO `projets` (`id`, `title`, `image`, `github`) VALUES
+(5, 'Nisage', NULL, 'https://github.com/Eddyzzero/Nisage');
+INSERT INTO `projets` (`id`, `title`, `image`, `github`) VALUES
+(6, 'parce visite colombia', NULL, 'https://github.com/Eddyzzero/colombian-recipies-blog');
+INSERT INTO `projets` (`id`, `title`, `image`, `github`) VALUES
+(7, 'xalix', NULL, 'https://xalix.be/');
+INSERT INTO `projets` (`id`, `title`, `image`, `github`) VALUES
+(8, 'Pistache', NULL, 'https://github.com/Eddyzzero/pistache');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

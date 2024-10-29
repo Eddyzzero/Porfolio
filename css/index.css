@@ -380,7 +380,6 @@ header {
 .container-child-projets {
     width: 100%;
     max-width: 650px;
-    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;

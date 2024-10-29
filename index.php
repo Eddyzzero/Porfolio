@@ -189,17 +189,19 @@ include './app/fcts-app.php';
         </div>
         <div class="container-carre-projects">
             <?php foreach ($projects as $project): ?>
+
             <div class="container-child-projets">
                 <div class="container-points">
                     <div class="point"></div>
                     <div class="point"></div>
                     <div class="point"></div>
                 </div>
-                <img id="projectImage" src="./assets/img/xalix.png" alt="">
+                <!-- affichage de l'image -->   
+                 <img src="<?php echo htmlspecialchars($project['image']);?>" alt="">
                 <h3><?php echo htmlspecialchars($project['title']); ?></h3>
                 <div class="container-buttons">
                     <button class="modal-trigger" data-id="<?php echo $project['id']; ?>">Modifier</button>
-                    <a href="<?php echo htmlspecialchars($project['link']); ?>">savoir plus</a>
+                    <a href="<?php echo htmlspecialchars($project['github']); ?>">GitHub</a>
                 </div>
             </div>
             <?php endforeach; ?>

@@ -44,8 +44,9 @@ function LOADNoteFromFile($projects) {
 function UPDATENoteFile($note_record) {
     $file = $note_record['file'];
     $note = [
+        'image' => $note_record['image'],
         'title' => $note_record['title'],
-        'link' => $note_record['link'],
+        'github' => $note_record['github'],
     ];
 
     $result = file_put_contents($file, json_encode([$note]));

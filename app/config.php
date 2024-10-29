@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "mon_porfolio";
+$dbname = "mon_portfolio";
 
 // creer une connexion 
 try {
