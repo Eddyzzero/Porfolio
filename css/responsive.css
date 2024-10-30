@@ -2,7 +2,6 @@
 
     .container-child-projets {
         max-width: 500px;
-        height: 350px;
     }
 
     .container-child-projets img {
@@ -254,7 +253,7 @@
     }
 
     .container-carre-projects {
-        height: 100vh;
+        height: 100%;
     }
 
     .container-child-projets {

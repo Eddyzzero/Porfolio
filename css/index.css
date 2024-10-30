@@ -369,10 +369,12 @@ header {
 
 .container-carre-projects {
     width: 100%;
+    min-height: 1100px;
+    padding: 90px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 50px;
-    height: 1100px;
     position: relative;
     overflow: hidden;
 }
@@ -388,8 +390,6 @@ header {
     border-radius: 20px;
     padding: 10px 0;
 
-    position: absolute;
-    
     -webkit-box-shadow: 10px 10px 0px -1px rgba(26,28,18,1);
     -moz-box-shadow: 10px 10px 0px -1px rgba(26,28,18,1);
     box-shadow: 10px 10px 0px -1px rgba(26,28,18,1);
@@ -404,19 +404,32 @@ header {
     right: 200px;
 }
 
+.container-carre-projects .container-child-projets:nth-child(3) {
+    right: 500px;
+    top: 400px;
+
+}
+
+.container-carre-projects .container-child-projets:nth-child(4) {
+    right: 900px;
+}
+
 .container-child-projets img {
     width: 100%;
     max-width: 600px;
     height: 100%;
     margin: 10px 0;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 20px;
 }
 
-.container-child-projets:nth-child(1) div  {
+.container-child-projets:nth-child(1) div,
+.container-child-projets:nth-child(3) div  {
     align-self: flex-start;
 }
-.container-child-projets:nth-child(2) div  {
+
+.container-child-projets:nth-child(2) div, 
+.container-child-projets:nth-child(4) div {
     align-self: flex-end;
 }
 
@@ -606,7 +619,7 @@ margin-bottom: 5px;
 }
 
 .contactez-moi p:nth-child(1) {
-    font-size: 5em;
+    font-size: clamp(40px, 2vw + 1rem, 24px);
     font-family: 'Bubbler one';
     font-weight: 800;
     text-transform: uppercase;

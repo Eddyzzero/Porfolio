@@ -196,11 +196,15 @@ include './app/fcts-app.php';
                     <div class="point"></div>
                     <div class="point"></div>
                 </div>
-                <!-- affichage de l'image -->   
-                 <img src="<?php echo htmlspecialchars($project['image']);?>" alt="">
+                <!-- affichage de l'image -->
+                 <?php
+
+                 $baseImage = base64_encode($project['image']);
+                  echo "<img src='data:image/jpeg;base64,$baseImage'>"; ?>
+
                 <h3><?php echo htmlspecialchars($project['title']); ?></h3>
                 <div class="container-buttons">
-                    <button class="modal-trigger" data-id="<?php echo $project['id']; ?>">Modifier</button>
+                    <!-- <button class="modal-trigger" data-id="<?php echo $project['id']; ?>">Modifier</button> -->
                     <a href="<?php echo htmlspecialchars($project['github']); ?>">GitHub</a>
                 </div>
             </div>
