@@ -197,34 +197,23 @@ include './app/fcts-app.php';
                     <div class="point"></div>
                 </div>
                 <!-- affichage de l'image -->
-                 <?php
+                <?php
 
-                 $baseImage = base64_encode($project['image']);
-                  echo "<img src='data:image/jpeg;base64,$baseImage'>"; ?>
+                $baseImage = base64_encode($project['image']);
+                echo "<img src='data:image/jpeg;base64,$baseImage'>"; ?>
 
                 <h3><?php echo htmlspecialchars($project['title']); ?></h3>
                 <div class="container-buttons">
-                    <!-- <button class="modal-trigger" data-id="<?php echo $project['id']; ?>">Modifier</button> -->
+<!--                     <button class="modal-trigger" data-id="<?php echo $project['id']; ?>">Modifier</button> -->
                     <a href="<?php echo htmlspecialchars($project['github']); ?>">GitHub</a>
                 </div>
+                <div class="tooltip" id = "tooltip">
+                    <h3>Infos</h3>
+                    <p>Les projets ont été realisés en WordPress, CSS vanilla, et PHP</p>
+                </div>
             </div>
+            
             <?php endforeach; ?>
-        </div>
-    </section>
-
-    <!-- Section modale -->
-    <section>
-        <div class="modal-container">
-            <div class="overlay modal-trigger"></div>
-            <div class="modal">
-                <button class="close-modal modal-trigger"> X </button>
-                <h1>Modificateur de contenu</h1>
-                <form id="imageForm" method="POST" enctype="multipart/form-data">
-                    <input type="file" id="photoInput" name="photo">
-                    <input type="submit">
-                </form>
-                <div id="photoPreview"></div>
-            </div>
         </div>
     </section>
 

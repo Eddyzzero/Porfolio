@@ -379,6 +379,55 @@ header {
     overflow: hidden;
 }
 
+/* secction fenetre floatante */
+.tooltip {
+    width: 20rem;
+    height: 10rem;
+    visibility: hidden;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: solid 3px #333;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 50%; /* Position au-dessus de la div */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Flèche en dessous du tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid ;
+    border-color: #333 transparent transparent transparent;
+}
+
+.container-child-projets:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip p {
+    padding-top: 1rem;
+    font-size: 1.2em;
+    font-family: 'spinnaker', sans-serif;
+}
+
+.tooltip h3 {
+    padding-top: 1rem;
+    font-size: 1.5em;
+    font-family: 'Bubbler one';
+    font-weight: 900;
+}
+
 .container-child-projets {
     width: 100%;
     max-width: 650px;
@@ -462,104 +511,6 @@ header {
 	border-radius: 12px;
 	padding: 5px 10px;
 }
-
-.modal h1 {
-    font-size: 1.5em;
-}
-
-.editer-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.separation-form-text {
-    display: flex;
-    flex-direction: column;
-}
-.modal-btn {
-    padding: 10px 14px;
-    font-size: 18px;
-    margin: 100px auto;
-    display: block;
-    min-width: 150px;
-    cursor: pointer;
-}
-
-.modal-container {
-/* display: none; */
-visibility: hidden;
-position: fixed;
-top: 0;
-width: 100vw;
-height: 100vh;
-transition: visibility 0.4s;
-}
-
-.modal-container.active {
-/* display: block; */
-visibility: visible;
-}
-
-.overlay {
-opacity: 0;
-position: absolute;
-width: 100%;
-height: 100%;
-background: #333333d3;
-transition: opacity 0.4s 0.2s ease-out;
-}
-
-.modal-container.active .overlay {
-opacity: 1;
-transition: opacity 0.4s ease-out;
-}
-
-.modal {
-opacity: 0;
-width: 95%;
-max-width: 500px;
-min-width: 300px;
-padding: 30px;
-background: #fff;
-border-radius: 5px;
-position: absolute;
-top: 40%;
-left: 50%;
-transform: translate(-50%, calc(-50% - 50px));
-transition: opacity 0.4s ease-out,
-transform 0.4s ease-out;
-}
-
-.modal-container.active .modal {
-opacity: 1;
-transform: translate(-50%, -50%);
-transition: opacity 0.4s 0.2s ease-out,
-transform 0.4s 0.2s ease-out;
-}
-
-.close-modal {
-padding: 8px 10px;
-border: none;
-border-radius: 5px;
-font-size: 18px;
-position: absolute;
-top: 10px;
-right: 10px;
-cursor: pointer;
-background: #ff365e;
-color: #fff;
-}
-.modal h1 {
-margin-bottom: 10px;
-font-family: Montserrat, sans-serif;
-font-weight: 500;
-}
-.modal p {
-line-height: 1.4;
-margin-bottom: 5px;
-}
-
 
 /*Section  contact */
 

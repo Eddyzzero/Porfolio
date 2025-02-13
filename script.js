@@ -22,16 +22,23 @@ document.querySelectorAll('.reveal').forEach(function(r) {
     observer.observe(r)
 })
 
-// faire une fenêtre modale 
+// faire une fenêtre tooltip
+document.addEventListener('DOMContentLoaded', (event) => {
+    const hoverDiv = document.querySelector('.container-child-projets');
+    const tooltip = document.getElementById('tooltip');
 
-const modalContainer = document.querySelector(".modal-container");
-const modalTrigger = document.querySelectorAll(".modal-trigger");
+    hoverDiv.addEventListener('mouseover', () => {
+        tooltip.style.visibility = 'visible';
+        tooltip.style.opacity = '1';
+    });
 
-modalTrigger.forEach(trigger => trigger.addEventListener("click",ToggleModal))
+    hoverDiv.addEventListener('mouseout', () => {
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.opacity = '0';
+    });
+});
 
-function ToggleModal() {
-    modalContainer.classList.toggle("active")
-}
+
 
 // rendre cliquanble la  div contact 
 document.getElementById("contactDiv").addEventListener("click", () => {
